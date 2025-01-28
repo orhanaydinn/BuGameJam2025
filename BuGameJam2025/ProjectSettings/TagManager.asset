@@ -7,6 +7,7 @@ TagManager:
   - SpawnPoint
   - Minion
   - FirePoint
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -14,9 +15,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Boss
+  - Minion
+  - Player
   - 
   - 
   - 
