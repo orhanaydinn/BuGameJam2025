@@ -43,7 +43,8 @@ public class Shoot : MonoBehaviour
 
         if (bulletRb != null)
         {
-            bulletRb.AddForce(firePointTransform.forward * bulletSpeed, ForceMode.Impulse);
+            //bulletRb.AddForce(firePointTransform.forward * bulletSpeed, ForceMode.Impulse);
+            bulletRb.velocity = firePointTransform.forward * bulletSpeed;
         }
         else
         {

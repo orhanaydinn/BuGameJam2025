@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinionsAttack : MonoBehaviour
+public class MinionsController : MonoBehaviour
 {
     private float attackTimer;
     [SerializeField] private float attackInterval = 5f;
     [SerializeField] private int attackDamage = 10;
+    [SerializeField] private int minionsHealth = 10;
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             Attack();
         }
@@ -19,6 +20,10 @@ public class MinionsAttack : MonoBehaviour
     private void Update()
     {
         attackTimer += Time.deltaTime;
+        if (minionsHealth <= 0)
+        {
+            Die();
+        }
     }
     void Attack()
     {
@@ -29,5 +34,16 @@ public class MinionsAttack : MonoBehaviour
             Debug.Log("Player health: " + PlayerController.playerHealth);
             attackTimer = 0f;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        minionsHealth -= damage;
+        Debug.Log("Minion health: " + minionsHealth);
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 588773559594785487}
   - component: {fileID: 7046239971905928689}
   - component: {fileID: 606137814574550360}
-  - component: {fileID: 78047098782007240}
   m_Layer: 0
   m_Name: MiniGhost 1
   m_TagString: Minion
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2.02, z: 1}
+  m_LocalScale: {x: 1, y: 1.1808313, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6908434436845387878}
@@ -102,19 +101,6 @@ MonoBehaviour:
   evasionUpdateInterval: 0.5
   blineDistance: 3
   isStopped: 0
---- !u!114 &78047098782007240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631513195187052543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f334ab71fd2beaf46b54402a2db5b946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackInterval: 1
 --- !u!1 &7194459154400601373
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +131,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.97, z: 0}
-  m_LocalScale: {x: 0.49, y: 1.96, z: 0.49}
+  m_LocalScale: {x: 1, y: 1.96, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3448350952049592391}
