@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     private Vector3 currentDirection;
+    private Vector3 smoothedVelocity;
 
     void Start()
     {
@@ -56,10 +57,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Vector3 targetDirection = transform.right * currentHorizontalVelocity + transform.forward * moveZ;
-        Vector3 smoothedDirection = Vector3.SmoothDamp(currentDirection, targetDirection, ref currentDirection, smoothingTime);
-        smoothedDirection.y = 0f;
+        targetDirection = targetDirection.normalized;
 
-        characterController.Move(smoothedDirection * currentSpeed * Time.deltaTime);
+        currentDirection = Vector3.SmoothDamp(currentDirection, targetDirection, ref smoothedVelocity, smoothingTime);
+        
+
+        characterController.Move(currentDirection * currentSpeed * Time.deltaTime);
 
         if (jump > 0 && isGrounded)
         {
