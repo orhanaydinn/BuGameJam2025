@@ -4,10 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SpawnPoint
-  - Minion
-  - FirePoint
-  - Boss
   layers:
   - Default
   - TransparentFX
@@ -15,9 +11,6 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Boss
-  - Minion
-  - Player
   - 
   - 
   - 
