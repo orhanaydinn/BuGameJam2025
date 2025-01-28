@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackInterval: 2
   attackDamage: 10
-  minionsHealth: 10
+  minionsHealth: 100
 --- !u!1001 &3682082211129971687
 PrefabInstance:
   m_ObjectHideFlags: 0
