@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static int playerHealth = 100;
+    public int maxHealth = 100;
+    public int playerHealth;
     // Start is called before the first frame update
     void Start()
     {
-
+        playerHealth = maxHealth;
+        Debug.Log(playerHealth);
     }
 
     // Update is called once per frame
@@ -16,8 +18,13 @@ public class PlayerController : MonoBehaviour
     {
         if (playerHealth <= 0)
         {
-            Debug.Log("Game Over");
+            HandlePlayerDeath();
         }
     }
 
+    void HandlePlayerDeath()
+    {
+        Debug.Log("Game Over");
+    }
+    //Changes: I moved the debug statement into its own method so we can call it instead of having all the death logic in the update function
 }

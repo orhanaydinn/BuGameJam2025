@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //compare tag, if collision tag is minion, reduce minions health
-
         Destroy(gameObject);
     }
 }
